@@ -6,5 +6,6 @@ mkShell {
     nodejs
     purescript
     spago
+    nodePackages.bower
   ];
 }
