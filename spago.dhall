@@ -12,20 +12,17 @@ to generate this file without the comments in this block.
 -}
 { name = "lunar-calendar"
 , dependencies =
-  [ "aff"
-  , "arrays"
+  [ "arrays"
   , "datetime"
-  , "effect"
   , "enums"
   , "integers"
   , "maybe"
   , "ordered-collections"
   , "prelude"
-  , "spec"
   , "tuples"
   ]
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs", "test/**/*.purs" ]
+, sources = [ "src/**/*.purs" ]
 , license = "MIT"
 , repository = "https://github.com/running-grass/purescript-lunar-calendar"
 }
