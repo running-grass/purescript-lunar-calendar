@@ -11,7 +11,19 @@ When creating a new Spago project, you can use
 to generate this file without the comments in this block.
 -}
 { name = "lunar-calendar"
-, dependencies = [ "console", "effect", "prelude", "psci-support" ]
+, dependencies =
+  [ "aff"
+  , "arrays"
+  , "datetime"
+  , "effect"
+  , "enums"
+  , "integers"
+  , "maybe"
+  , "ordered-collections"
+  , "prelude"
+  , "spec"
+  , "tuples"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 , license = "MIT"
