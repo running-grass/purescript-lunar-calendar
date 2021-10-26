@@ -17,10 +17,10 @@
         "purescript-arrays": "^v6.0.1",
         "purescript-datetime": "^v5.0.2",
         "purescript-enums": "^v5.0.0",
-        "purescript-integers": "https://github.com/purescript/purescript-integers.git#v5.0.0",
+        "purescript-integers": "^v5.0.0",
         "purescript-maybe": "^v5.0.0",
-        "purescript-ordered-collections": "https://github.com/purescript/purescript-ordered-collections.git#v2.0.1",
-        "purescript-prelude": "https://github.com/purescript/purescript-prelude.git#v5.0.1",
+        "purescript-ordered-collections": "^v2.0.1",
+        "purescript-prelude": "^v5.0.1",
         "purescript-tuples": "^v6.0.1"
     }
 }
