@@ -1,4 +1,8 @@
 module Data.Date.Lunar(
+  Year,
+  Month,
+  Day,
+
   leapDays,
   
   solar2lunar
@@ -259,7 +263,7 @@ leapMonth year = case getLunarInfo year <#> (_  .&. 0xf) of
   Just 0 -> Nothing
   other -> other
 
--- 返回农历y年闰月的天数 若该年没有闰月则返回0
+-- | 返回农历y年闰月的天数 若该年没有闰月则返回0
 leapDays :: Year -> Maybe Int
 leapDays year = case leapMonth year, isMaskYes year maskLeapDays of
   Nothing, _ -> Just 0
@@ -299,8 +303,6 @@ toGanZhiYear lyear = do
   ganStr <- gan !! ganKey'
   zhiStr <- zhi !! zhiKey'
   Just $ ganStr <> zhiStr
-
-
 
 -- 公历月、日判断所属星座
 toAstro :: Month -> Day -> Maybe String
@@ -344,7 +346,7 @@ getAnimal :: Year -> Maybe String
 getAnimal year = animals !! ((year - 4) `mod` 12)
 
 
--- 传入阳历年月日获得详细的公历、农历object信息 <=>JSON
+-- | 传入阳历年月日获得详细的农历信息 <=>JSON
 solar2lunar :: Year -> Month -> Day -> Maybe LunarDate
 solar2lunar year month day = do
   year_ <- toEnum year
